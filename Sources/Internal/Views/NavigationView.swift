@@ -30,6 +30,7 @@ struct NavigationView: View {
             .onChange(of: isGestureActive, perform: onDragGestureEnded)
             .onAnimationCompleted(for: animatableData.opacity, perform: onAnimationCompleted)
             .animation(.keyboard(withDelay: isKeyboardVisible), value: isKeyboardVisible)
+            .background(config.backgroundColor)
     }
 }
 private extension NavigationView {
